@@ -1,2 +1,2 @@
 # Happy-Birthday
-Happy birthday, shreyas!
+Happy birthday, Shreyas!
