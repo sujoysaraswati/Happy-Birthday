@@ -1,0 +1,131 @@
+<!--Hello, everyone who is looking at this code!-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/x-jpg" href="logo.jpg">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="loader.css">
+        <title>Poems, Posters, and Prayers</title>
+      <style>
+        .block{
+            width:600px;
+            height: 200px;
+            position:absolute;
+            left:400px;
+            text-align: center;
+        }
+
+        .icons{
+            background-color:black;
+            height:50px;
+        }
+
+        .icons a{
+            color:white;
+            width:50px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+            position: absolute;
+        }
+
+        .icons a:nth-child(1){
+            color:white;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+
+        .icons a:nth-child(2){
+            color:white;
+            width:50px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+        
+        .icons a:nth-child(3){
+            color:white;
+            width:150px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+
+        h2{text-align: center;}
+
+        .one{
+            background-color: lightseagreen;
+            top:150px;
+        }
+
+        .two{
+            background-color: lightpink;
+            top:400px;
+            height:375px;
+        }
+
+        .last{
+            background-color: lightgrey;
+            top:825px;
+        }
+
+        img{
+            width:100px;
+            height: 100px;
+        }
+      </style>
+    </head>
+    <body>
+        <div style="text-align: center;">
+            <div style="font-size:36pt;color: red;background-color: yellowgreen;">Poems, Posters, and Prayers</div></div>
+            <div class="icons">
+                <a href="index.html">Home</a>
+                <a href="games.html">Games</a>
+                <a href="main.html">Part 2</a>
+            </div>
+        <div class="block one">
+            <h2>Thought for the day and Prayer</h2>
+            <audio controls>
+                <source src="" type="audio/mp3">
+            </audio>
+            <audio controls>
+                <source src="" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="block two">
+            <h2>Poems</h2>
+            <video controls>
+                <source src="" type="video/mp4">
+                </video>
+               <video controls>
+                <source src="" type="video/mp4">
+                </video>
+        </div>
+        <div class="last block">
+            <h2>Posters</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img onclick="fullScreen(this)" src="Tables/Akshath.jpg">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+    </body>
+</html>
+<script>
+    function fullScreen(y){
+        if (y.requestFullscreen) {
+    y.requestFullscreen();
+  } else if (y.mozRequestFullScreen) { 
+    y.mozRequestFullScreen();
+  } else if (y.webkitRequestFullscreen) { 
+    y.webkitRequestFullscreen();
+  } else if (y.msRequestFullscreen) { 
+    y.msRequestFullscreen();
+  }
+    }
+</script>

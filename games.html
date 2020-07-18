@@ -1,0 +1,184 @@
+<!--Hello, everyone who is looking at this code!-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Games</title>
+    <link rel="icon" type="image/x-jpg" href="logo.jpg">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="loader.css">
+    <style>
+
+    select,button{
+        position: absolute;
+    }
+
+    select{left:650px; width: 150px; height: 25px;}
+    button{left:800px; width: 75px; height: 25px;}
+
+    .a{
+        text-align: center;
+        font-size: 36pt;
+        color:red;
+        background-color: yellowgreen;
+    }
+
+    .aa{
+        text-align: center;
+        font-size: 18pt;
+        color:tomato;
+        background-color: teal;
+    }
+
+    .ifr{
+        text-align: center;
+        position: absolute;
+        left: 150px;
+        top: 300px;
+        background: lightblue;
+    }
+
+    .i{
+        text-align: center;
+        position: absolute;
+        top:320px;
+        left: 750px;
+        background: lightblue;
+    }
+
+    .il{
+        text-align: center;
+        position: absolute;
+        top:900px;
+        left: 450px;
+        background: lightblue;
+    }
+    .icons{
+            background-color:black;
+            height:50px;
+        }
+
+        .icons a{
+            color:white;
+            width:50px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+            position: absolute;
+        }
+
+        .icons a:nth-child(1){
+            color:white;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+
+        .icons a:nth-child(2){
+            color:white;
+            width:150px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+        
+        .icons a:nth-child(3){
+            color:white;
+            width:150px;
+            height:50px;
+            text-decoration: none;
+            font-size:50px;
+        }
+
+    [onclick="quiz()"]{position: absolute;top: 170px; left:48%; width:100px; height: 50px;}
+    </style>
+</head>
+<body>
+<div class="a">Games</div>
+<div class="icons">
+    <a href="index.html">Home</a>
+    <a href="par1.html">Part 1</a>
+    <a href="main.html">Part 2</a>
+</div>
+<select id="aa">
+<OPtion>Rock</OPtion>
+<option>Paper</option>
+<option>Scissors</option>
+</select>
+<button onclick="func()">Submit</button>
+<button onclick="quiz()">Start a Quiz</button>
+<div class="ifr">
+<h1>Ping Pong game <br> Use left and right arrow keys</h1>
+<iframe
+    src="https://scratch.mit.edu/projects/272492750/embed"
+    width="450px"
+    height="450px"
+    allowfullscreen
+
+>
+</iframe>
+</div>
+<div class="i">
+    <h1>Volume finder<br>
+    Only type numbers</h1>
+<iframe width="450px" height="450px" allowfullscreen src="https://scratch.mit.edu/projects/376676935/embed"></iframe>
+</div>
+<div class="il">
+    <h1>Area finder<br>
+    Only type numbers</h1>
+<iframe width="450px" height="450px" allowfullscreen src="https://scratch.mit.edu/projects/376495157/embed"></iframe>
+</div>
+</body>
+</html>
+<script>
+    function quiz(){
+    // Question 1
+    var score = 0;
+    var que1 = prompt("Which fictional character lives in postal code H0H0H0? Please use the full name, with correct spelling");
+    if(que1 == null){alert("You clicked 'cancel'. The question is marked as incorrect. Game over");}
+    que1 = que1.toLowerCase();
+    
+    if(que1 == "santa claus"){score++; alert("Correct answer!")}
+    if(que1 != "santa claus"){alert("Incorrect answer! The correct answer is Santa Claus")}
+    // Question 2
+    var que2 = prompt("What is the capital of Slovenia? Please use the full name, with correct spelling");
+    if(que2 == null){alert("You clicked 'cancel'. The question is marked as incorrect. Game over");}
+    que2 = que2.toLowerCase();
+    if(que2 == "ljubljana"){score++; alert("Correct answer!")}
+    if(que2 != "ljubljana"){alert("Incorrect answer! The correct answer is Ljubljana")}
+    //Question 3
+    var que3 = prompt("When were chocolate chip cookies invented? Only use numbers");
+    if(que3 == null){alert("You clicked 'cancel'. The question is marked as incorrect. Game over");}
+    if(que3 == "1937"){score++; alert("Correct answer!")}
+    if(que3 != "1937"){alert("Incorrect answer! The correct answer is 1937")}
+    //Question 4
+    var que4 = prompt("What is the fear of poems called? Please use the full name, with correct spelling");
+    if(que4 == null){alert("You clicked 'cancel'. The question is marked as incorrect. Game over");}
+    que4 = que4.toLowerCase();
+    if(que4 == "metrophobia"){score++; alert("Correct answer!")}
+    if(que4 != "metrophobia"){alert("Incorrect answer! The correct answer is Metrophobia")}
+    //Question 5
+    var que5 = prompt("Hiroshima and ________ were bombed during World War II. Please use the full name, with correct spelling");
+    if(que5 == null){alert("You clicked 'cancel'. The question is marked as incorrect. Game over");}
+    que5 = que5.toLowerCase();
+    if(que5 == "nagasaki"){score++; alert("Correct answer!")}
+    if(que5 != "nagasaki"){alert("Incorrect answer! The correct answer is Nagasaki")}
+    alert("Your score is: " + score + "/5.") 
+}
+
+function func(){
+    var x = document.getElementById('aa').value.toLowerCase();
+    var _y = Math.floor(Math.random() * 3) + 1;
+    var y;
+    if(_y == 1){y = "rock"}
+    if(_y == 2){y = "paper"}
+    if(_y == 3){y = "scissors"}
+    if(x == y){alert("Tie! Comp: " + y)}
+    if(x == "rock" && y == "paper"){alert("Comp wins! Comp: " + y)};
+    if(x == "paper" && y == "scissors"){alert("Comp wins! Comp: " + y)};
+    if(x == "scissors" && y == "rock"){alert("Comp wins! Comp: " + y)};
+    if(y == "rock" && x == "paper"){alert("You win! Comp: " + y)};
+    if(y == "paper" && x == "scissors"){alert("You win! Comp: " + y)};
+    if(y == "scissors" && x == "rock"){alert("You win! Comp: " + y)};
+}
+</script>
